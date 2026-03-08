@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+}
+
+body.serenity-mode {
+  font-size: 20px;
+}
+
+body.serenity-mode p, 
+body.serenity-mode span, 
+body.serenity-mode div,
+body.serenity-mode li {
+  font-size: max(20px, 1em);
+}
+
+body.serenity-mode h1, 
+body.serenity-mode h2, 
+body.serenity-mode h3, 
+body.serenity-mode h4, 
+body.serenity-mode h5, 
+body.serenity-mode h6 {
+  font-size: max(32px, 1.5em);
+}
+
+body.serenity-mode button, 
+body.serenity-mode .btn {
+  min-height: 56px;
+  font-size: max(18px, 1em);
+}
+
+body.serenity-mode section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
