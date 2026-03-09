@@ -199,9 +199,7 @@ export default function App() {
             <p className="text-lg md:text-xl text-slate-100 mb-8 max-w-md font-medium">
               Des smartphones testés, garantis, et une assistance dédiée pour vous accompagner pas à pas.
             </p>
-            <div className="text-lg text-slate-100 mb-8 font-medium">
-              tel:+237600000000
-            </div>
+
             <button onClick={() => navigate('product')} className="bg-white text-black font-bold py-4 px-8 rounded-full hover:bg-slate-200 transition-colors text-lg">
               En profiter
             </button>
@@ -260,7 +258,7 @@ export default function App() {
         <h3 className="text-2xl font-black mb-6">Des écrans larges, parfaits pour lire</h3>
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="lg:w-1/3 rounded-2xl overflow-hidden relative min-h-[400px]">
-            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" alt="Lifestyle" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="/image-accueil.png" alt="Lifestyle" className="absolute inset-0 w-full h-full object-cover" />
           </div>
           <div className="lg:w-2/3">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 h-full">
