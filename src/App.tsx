@@ -171,10 +171,24 @@ export default function App() {
   const HomeScreen = () => (
     <div className="min-h-screen bg-white pb-12">
       
-{/* 1. HERO BANNER */}
-      <section className="bg-[#1D1D1B] text-white">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
-          <div className="p-8 md:p-16 flex-1 z-10">
+{/* 1. HERO BANNER (Version Plein Écran Correct) */}
+      <section className="relative bg-[#1D1D1B] text-white min-h-[500px] md:min-h-[600px] flex items-center overflow-hidden">
+        
+        {/* L'image d'arrière-plan qui couvre TOUT */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/image-accueil.png" 
+            alt="Seniors utilisant un smartphone" 
+            className="w-full h-full object-cover opacity-90"
+            style={{ objectPosition: 'center 20%' }}
+          />
+          {/* Un dégradé sombre sur toute la surface pour garantir la lisibilité du texte blanc */}
+          <div className="absolute inset-0 bg-black/50 z-10"></div>
+        </div>
+
+        {/* Le contenu textuel, placé AU-DESSUS de l'image */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative z-20 w-full">
+          <div className="max-w-2xl"> {/* On limite la largeur du texte pour ne pas qu'il traverse tout l'écran */}
             <div className="flex items-center gap-2 mb-4">
               <span className="font-bold text-xl tracking-tighter">Back Market</span>
               <span className="bg-white text-black text-xs font-bold px-2 py-0.5 rounded-sm">Séniors</span>
@@ -182,21 +196,15 @@ export default function App() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-6">
               Profiter de la technologie simplement, ça c'est une bonne résolution.
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-md font-medium">
+            <p className="text-lg md:text-xl text-slate-100 mb-8 max-w-md font-medium">
               Des smartphones testés, garantis, et une assistance dédiée pour vous accompagner pas à pas.
             </p>
+            <div className="text-lg text-slate-100 mb-8 font-medium">
+              tel:+237600000000
+            </div>
             <button onClick={() => navigate('product')} className="bg-white text-black font-bold py-4 px-8 rounded-full hover:bg-slate-200 transition-colors text-lg">
               En profiter
             </button>
-          </div>
-          <div className="flex-1 w-full h-[400px] md:h-[500px] relative">
-            <img 
-              src="/image-accueil.png" 
-              alt="Seniors utilisant un smartphone" 
-              className="absolute inset-0 w-full h-full object-cover opacity-80"
-              style={{ objectPosition: 'center 20%' }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-transparent to-[#1D1D1B] opacity-80 md:opacity-100 w-full md:w-1/3"></div>
           </div>
         </div>
       </section>
