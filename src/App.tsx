@@ -171,7 +171,8 @@ export default function App() {
   const HomeScreen = () => (
     <div className="min-h-screen bg-white pb-12">
       
-<section className="bg-[#1D1D1B] text-white">
+{/* 1. HERO BANNER */}
+      <section className="bg-[#1D1D1B] text-white">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
           <div className="p-8 md:p-16 flex-1 z-10">
             <div className="flex items-center gap-2 mb-4">
@@ -198,6 +199,7 @@ export default function App() {
             <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-transparent to-[#1D1D1B] opacity-80 md:opacity-100 w-full md:w-1/3"></div>
           </div>
         </div>
+      </section>
 
       {/* 2. REASSURANCE */}
       <section className="border-b border-slate-200 py-12 px-4">
