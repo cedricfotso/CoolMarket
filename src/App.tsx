@@ -343,19 +343,20 @@ export default function App() {
         </div>
       </section>
 
-      {/* SECTION VIDÉOS DE RÉASSURANCE */}
+     {/* SECTION VIDÉOS DE RÉASSURANCE */}
       <section className="max-w-7xl mx-auto px-4 py-16">
         <h3 className="text-3xl font-black mb-8 text-center text-[#2A0054]">
           Achetez en toute sérénité : découvrez nos engagements
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Ajout de items-start pour que les cartes s'adaptent bien si les vidéos ont des formats différents */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           
           {/* Vidéo 3 (Achat sans stress) */}
           <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white flex flex-col">
             <video 
               src="/video3.mp4" 
               controls 
-              className="w-full aspect-video object-cover bg-black"
+              className="w-full h-auto bg-black"
             ></video>
             <div className="p-6 flex-1">
               <h4 className="font-bold text-xl text-slate-900">Acheter en ligne sans stress</h4>
@@ -370,7 +371,7 @@ export default function App() {
             <video 
               src="/video1.mp4" 
               controls 
-              className="w-full aspect-video object-cover bg-black"
+              className="w-full h-auto bg-black"
             ></video>
             <div className="p-6 flex-1">
               <h4 className="font-bold text-xl text-slate-900">Le concept Back Market</h4>
@@ -385,7 +386,7 @@ export default function App() {
             <video 
               src="/video2.mp4" 
               controls 
-              className="w-full aspect-video object-cover bg-black"
+              className="w-full h-auto bg-black"
             ></video>
             <div className="p-6 flex-1">
               <h4 className="font-bold text-xl text-slate-900">Nos garanties en détail</h4>
